@@ -5,7 +5,7 @@ Projeto acadêmico de uma página institucional para um hospital e operadora de 
 ## Autores
 
 - Instituição: Uninassau
-- Lucas Matheus, Mateus Trajano, Vinícius Tavares e Pedro Cintra.
+- Equipe: Lucas Matheus, Mateus Trajano, Vinícius Tavares e Pedro Cintra.
 - Curso: Análise e Desenvolvimento de Sistemas
 - Turma: 2° Período, Manhã.
 
@@ -70,7 +70,7 @@ git init
 git add .
 git commit -m "Projeto Hospital Vetor"
 git branch -M main
-git remote add origin https://github.com/SEU-USUARIO/hospital-vetor.git
+git remote add origin https://github.com/lucasmatheuslmsg/hospital-vetor.git
 git push -u origin main
 ```
 
