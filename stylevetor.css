@@ -1,0 +1,517 @@
+/* Resetando margens, preenchimentos e definindo box-sizing para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Definindo comportamento de rolagem suave para a página */
+html {
+    scroll-behavior: smooth;
+}
+/* Estilizando o corpo da página com fonte, cor de fundo, cor do texto, altura da linha e tamanho da fonte */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #263746;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:focus,
+button:focus,
+input:focus,
+select:focus {
+    outline: 3px solid #F5B942;
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+/* Estilizando o cabeçalho da página com cor de fundo, borda inferior, preenchimento, layout flexível, alinhamento e sombra */
+.cabecalho {
+    background-color: #ffffff;
+    border-bottom: 1px solid #E2E8ED;
+    padding: 14px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+/*Estilizando devidamente os itens do site conforme a identidade visual do hospital, incluindo o logo, título, menu e botões*/
+.logo-titulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-titulo img {
+    width: 70px;
+    height: auto;
+}
+
+.titulo-hospital {
+    color: #123B5D;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    color: #263746;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.menu a:hover {
+    color: #1677B8;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: 1px solid #DCE5EA;
+    border-radius: 8px;
+    font-size: 1.6rem;
+    padding: 4px 12px;
+    color: #123B5D;
+    cursor: pointer;
+}
+
+.btn,
+.btn-cotacao,
+.botoes button {
+    background-color: #1677B8;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 24px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-cotacao {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+}
+
+.btn:hover,
+.btn-cotacao:hover,
+.botoes button:hover {
+    background-color: #125E91;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(18, 94, 145, 0.18);
+}
+
+.btn-secundario {
+    background-color: #ffffff;
+    color: #1677B8;
+    border: 2px solid #1677B8;
+}
+
+.btn-secundario:hover {
+    background-color: #EAF4FA;
+}
+
+main {
+    width: 100%;
+}
+
+section {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+h1 {
+    color: #123B5D;
+    font-size: clamp(2rem, 4vw, 3.3rem);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #123B5D;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #1677B8;
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+}
+
+section p {
+    color: #526372;
+    font-size: 1.05rem;
+    max-width: 1000px;
+    margin-bottom: 25px;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding-top: 70px;
+}
+
+.hero-texto {
+    flex: 1;
+}
+
+.hero-botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.hero-imagem {
+    flex: 1;
+}
+
+.hero-imagem img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(18, 59, 93, 0.12);
+}
+
+.numeros {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    padding: 0 20px;
+    margin-bottom: 40px;
+    border: 1px solid #DCE5EA;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(18, 59, 93, 0.08);
+}
+
+.numero {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 25px;
+    text-align: center;
+    border-right: 1px solid #E3E9ED;
+}
+
+.numero:last-child {
+    border-right: none;
+}
+
+.numero strong {
+    color: #1677B8;
+    font-size: 1.8rem;
+}
+
+.numero span {
+    background-color: #123B5D;
+    color: #ffffff;
+    font-weight: 700;
+    width: calc(100% + 50px);
+    padding: 14px;
+    margin: -25px -25px 15px;
+}
+
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.atalhos h2 {
+    text-align: center;
+}
+
+.planos-grade {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.plano {
+    display: flex;
+    flex-direction: column;
+    background-color: #F5F9FB;
+    border-left: 5px solid #20A67A;
+    border-radius: 10px;
+    padding: 25px;
+    transition: 0.2s;
+}
+
+.plano:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(18, 59, 93, 0.1);
+}
+
+.plano.destaque {
+    border-left-color: #F5B942;
+    box-shadow: 0 8px 24px rgba(245, 185, 66, 0.35);
+}
+
+.plano .preco {
+    color: #123B5D;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.plano ul {
+    padding-left: 20px;
+    margin-bottom: 25px;
+    flex: 1;
+}
+
+.plano li {
+    margin-bottom: 12px;
+    color: #40515E;
+}
+
+.plano li:last-child {
+    margin-bottom: 0;
+}
+
+.plano li::marker {
+    color: #20A67A;
+}
+
+.plano .btn {
+    align-self: flex-start;
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    background-color: #F5F9FB;
+    border: 1px solid #DCE5EA;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo label {
+    font-weight: 700;
+    color: #123B5D;
+}
+
+.campo input,
+.campo select {
+    padding: 12px 14px;
+    border: 1px solid #C5D3DC;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #ffffff;
+    color: #263746;
+}
+
+.campo.invalido input,
+.campo.invalido select {
+    border-color: #C0392B;
+    background-color: #FDF3F2;
+}
+
+.campo.valido input,
+.campo.valido select {
+    border-color: #20A67A;
+}
+
+.erro {
+    color: #C0392B;
+    font-size: 0.85rem;
+    min-height: 1.1em;
+}
+
+.campo-check {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.campo-check input {
+    width: 20px;
+    height: 20px;
+}
+
+.campo-check .erro {
+    width: 100%;
+}
+
+.resumo {
+    grid-column: 1 / -1;
+    color: #123B5D;
+    font-weight: 700;
+}
+
+.formulario .btn {
+    grid-column: 1 / -1;
+    justify-self: start;
+}
+
+.retorno {
+    grid-column: 1 / -1;
+    font-weight: 700;
+    margin: 0;
+}
+
+.retorno.sucesso {
+    color: #20A67A;
+}
+
+.retorno.falha {
+    color: #C0392B;
+}
+
+.rodape {
+    text-align: center;
+    padding: 20px;
+    background-color: #0d3b66;
+    color: #ffffff;
+}
+
+.aviso {
+    position: fixed;
+    left: 50%;
+    bottom: 30px;
+    transform: translate(-50%, 20px);
+    background-color: #123B5D;
+    color: #ffffff;
+    padding: 14px 24px;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    z-index: 2000;
+    max-width: 90%;
+    text-align: center;
+}
+
+.aviso.ativo {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+.topo {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 46px;
+    height: 46px;
+    border: none;
+    border-radius: 50%;
+    background-color: #1677B8;
+    color: #ffffff;
+    font-size: 1.3rem;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    z-index: 1500;
+}
+
+.topo.ativo {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .planos-grade {
+        grid-template-columns: 1fr;
+    }
+
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        background-color: #ffffff;
+        padding: 20px 6%;
+        border-bottom: 1px solid #E2E8ED;
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    .menu.aberto {
+        display: flex;
+    }
+}
+
+@media (max-width: 600px) {
+    .numeros {
+        grid-template-columns: 1fr;
+    }
+
+    .numero {
+        border-right: none;
+        border-bottom: 1px solid #E3E9ED;
+    }
+
+    .numero:last-child {
+        border-bottom: none;
+    }
+
+    .titulo-hospital {
+        font-size: 1.3rem;
+    }
+
+    .logo-titulo img {
+        width: 50px;
+    }
+
+    .botoes button,
+    .hero-botoes .btn {
+        width: 100%;
+    }
+}

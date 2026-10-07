@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--<!DOCTYPE html> declara que este documento é um documento HTML5. A tag <html> define o início do documento HTML e o atributo lang="pt-br" indica que o idioma principal do conteúdo é o português brasileiro.-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hospital Vetor: planos de saúde e odontológicos para você, sua família e sua empresa.">
+    <title>Hospital Vetor</title>
+    <link rel="icon" href="logo_vetor.png" type="image/png">
+    <link rel="stylesheet" href="stylevetor.css">
+</head>
+/* O elemento <head> contém metadados sobre o documento, incluindo a codificação de caracteres, configurações de viewport para responsividade, descrição do site, título da página, ícone da aba e link para o arquivo CSS externo. */
+<body>
+    <header class="cabecalho">
+        <div class="logo-titulo">
+            <img src="logo_vetor.png" alt="Logo Hospital Vetor">
+            <p class="titulo-hospital">Hospital Vetor</p>
+        </div>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menuPrincipal">&#9776;</button>
+        <nav class="menu" id="menuPrincipal" aria-label="Menu principal">
+            <a href="#inicio">Conheça o Hospital Vetor</a>
+            <a href="#planos">Nossos Planos</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#unidades">Unidades</a>
+            <a href="#cotacao">Acesse sua área</a>
+            <button type="button" class="btn-cotacao" data-rolar="#cotacao">Faça sua cotação</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="hero-texto">
+                <h1>Tudo o que você precisa para cuidar da sua saúde, em um só lugar.</h1>
+                <p>Planos para você, sua família e sua empresa com ampla rede própria, atendimento integrado e unidades em todo o Brasil.</p>
+                <div class="hero-botoes">
+                    <button type="button" class="btn" data-rolar="#cotacao">Faça sua cotação</button>
+                    <button type="button" class="btn btn-secundario" data-rolar="#planos">Conheça nossos planos de saúde</button>
+                </div>
+            </div>
+            <figure class="hero-imagem">
+                <img src="hospital_vetor.png" alt="Frente do Hospital Vetor">
+            </figure>
+        </section>
+
+        <section class="numeros" id="unidades" aria-label="Números do Hospital Vetor">
+            <article class="numero">
+                <strong data-valor="15.8" data-casas="1" data-sufixo=" Milhões">15,8 Milhões</strong>
+                <span>Beneficiários ativos</span>
+            </article>
+            <article class="numero">
+                <strong data-valor="86" data-casas="0" data-sufixo="">86</strong>
+                <span>Hospitais</span>
+            </article>
+            <article class="numero">
+                <strong data-valor="365" data-casas="0" data-sufixo="">365</strong>
+                <span>Clínicas</span>
+            </article>
+        </section>
+
+        <section class="atalhos" id="servicos" aria-labelledby="tituloServicos">
+            <h2 id="tituloServicos">Serviços rápidos</h2>
+            <div class="botoes">
+                <button type="button" data-servico="Central de Serviços">Central de Serviços</button>
+                <button type="button" data-servico="Solicitar Autorização">Solicitar Autorização</button>
+                <button type="button" data-servico="Resultados de Exames">Resultados de Exames</button>
+                <button type="button" data-servico="Consultas e Exames">Consultas e Exames</button>
+                <button type="button" data-servico="Imposto de Renda">Imposto de Renda</button>
+                <button type="button" data-servico="2ª Via de Boleto">2ª Via de Boleto</button>
+            </div>
+        </section>
+
+        <section class="apresentacao" aria-labelledby="tituloCuidado">
+            <h2 id="tituloCuidado">Cuidado de verdade. Em todos os momentos da sua vida.</h2>
+            <h3>Muito mais do que um plano de saúde. Benefícios para cuidar de você todos os dias.</h3>
+            <p>Ao contratar o Hospital Vetor, você conta com serviços exclusivos que oferecem mais praticidade, economia e cuidado para a sua saúde em todos os momentos.</p>
+        </section>
+
+        <section class="planos" id="planos" aria-labelledby="tituloPlanos">
+            <h2 id="tituloPlanos">Nossos planos</h2>
+            <div class="planos-grade">
+                <article class="plano">
+                    <h3>Planos de Saúde para você</h3>
+                    <p class="preco">A partir de R$ 113,60/mês</p>
+                    <ul>
+                        <li>Rede própria de qualidade com hospitais, clínicas e laboratórios.</li>
+                        <li>Cobertura nacional 24h para urgência e emergência na rede parceira.</li>
+                        <li>Teleconsulta em diversas especialidades, de onde você estiver.</li>
+                        <li>Programas de prevenção e Clube de Vantagens para cuidar da sua saúde e bem-estar.</li>
+                    </ul>
+                    <button type="button" class="btn btn-contratar" data-plano="individual">Contrate Agora</button>
+                </article>
+
+                <article class="plano">
+                    <h3>Planos de Saúde para sua família ou seu negócio</h3>
+                    <p class="preco">A partir de R$ 88,56/mês</p>
+                    <ul>
+                        <li>Rede própria de qualidade com hospitais, clínicas e laboratórios.</li>
+                        <li>Cobertura nacional 24h para urgência e emergência na rede parceira.</li>
+                        <li>Condições especiais para quem tem CNPJ.</li>
+                        <li>Inclua dependentes, familiares ou não, com até 64 anos no seu plano.</li>
+                    </ul>
+                    <button type="button" class="btn btn-contratar" data-plano="familiar">Contrate Agora</button>
+                </article>
+
+                <article class="plano">
+                    <h3>Saúde bucal acessível para todos!</h3>
+                    <p class="preco">A partir de R$ 39,90/mês</p>
+                    <ul>
+                        <li>Urgência 24h.</li>
+                        <li>Nossa ampla rede credenciada conta com mais de 20 mil dentistas em todo o Brasil.</li>
+                    </ul>
+                    <button type="button" class="btn btn-contratar" data-plano="odontologico">Contrate Agora</button>
+                </article>
+            </div>
+        </section>
+
+        <section class="cotacao" id="cotacao" aria-labelledby="tituloCotacao">
+            <h2 id="tituloCotacao">Encontre o plano ideal para cuidar de quem importa.</h2>
+            <h3>Soluções para você, sua família e sua empresa.</h3>
+            <p>Com planos de saúde, odontológicos e empresariais, o Hospital Vetor oferece soluções completas para cuidar da sua saúde e da sua família. Preencha o formulário e receba sua cotação.</p>
+
+            <form id="formCotacao" class="formulario" novalidate>
+                <div class="campo">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome" autocomplete="name" required>
+                    <small class="erro" id="erro-nome" aria-live="polite"></small>
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="voce@email.com" autocomplete="email" required>
+                    <small class="erro" id="erro-email" aria-live="polite"></small>
+                </div>
+
+                <div class="campo">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(81) 99999-9999" autocomplete="tel" maxlength="15" required>
+                    <small class="erro" id="erro-telefone" aria-live="polite"></small>
+                </div>
+
+                <div class="campo">
+                    <label for="plano">Tipo de plano</label>
+                    <select id="plano" name="plano" required>
+                        <option value="">Selecione uma opção</option>
+                        <option value="individual">Plano de saúde individual</option>
+                        <option value="familiar">Plano familiar ou empresarial</option>
+                        <option value="odontologico">Plano odontológico</option>
+                    </select>
+                    <small class="erro" id="erro-plano" aria-live="polite"></small>
+                </div>
+
+                <div class="campo">
+                    <label for="vidas">Quantidade de pessoas no plano</label>
+                    <input type="number" id="vidas" name="vidas" min="1" max="100" value="1" required>
+                    <small class="erro" id="erro-vidas" aria-live="polite"></small>
+                </div>
+
+                <div class="campo campo-check">
+                    <input type="checkbox" id="aceite" name="aceite" required>
+                    <label for="aceite">Concordo em receber contato do Hospital Vetor.</label>
+                    <small class="erro" id="erro-aceite" aria-live="polite"></small>
+                </div>
+
+                <div class="resumo" id="resumo" aria-live="polite"></div>
+
+                <button type="submit" class="btn">Enviar cotação</button>
+                <p class="retorno" id="retorno" role="status" aria-live="polite"></p>
+            </form>
+
+            <div class="hero-botoes">
+                <button type="button" class="btn btn-secundario" data-plano="individual">Planos individual e familiares</button>
+                <button type="button" class="btn btn-secundario" data-plano="familiar">Planos empresariais</button>
+            </div>
+        </section>
+    </main>
+/* O elemento <main> contém o conteúdo principal da página, incluindo seções como hero, números, atalhos, apresentação, planos e cotação, cada uma com seus respectivos elementos e informações. */
+
+    <footer class="rodape">
+        <p>© 2026 Hospital Vetor. Todos os direitos reservados. 43.643.812/0001-38</p>
+    </footer>
+
+    <div class="aviso" id="aviso" role="status" aria-live="polite"></div>
+    <button type="button" class="topo" id="botaoTopo" aria-label="Voltar ao topo">&#8593;</button>
+
+    <script src="script.js"></script>
+</body>
+/* O elemento <footer> contém informações de direitos autorais e registro da empresa. A div com a classe "aviso" é usada para exibir mensagens de status para o usuário, e o botão com a classe "topo" permite que o usuário volte ao topo da página. O script.js é incluído no final do corpo para adicionar interatividade à página. */
+</html>
+/* O elemento <html> encerra o documento HTML, indicando o fim do conteúdo da página. */
